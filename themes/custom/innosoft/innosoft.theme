@@ -1,0 +1,12 @@
+<?php 
+
+function innosoft_preprocess_html(&$variables)
+{
+    $language = Drupal::languageManager()->getCurrentLanguage();
+    
+    if ($language->getDirection() == "rtl") {
+        $variables['#attached']['library'][] = 'innosoft/css/bootstrap-rtl.css';
+    } elseif ($language->getDirection() == "ltr") {
+        $variables['#attached']['library'][] = 'innosoft/css/bootstrap-ltr.css/ltr-style';
+    }
+}

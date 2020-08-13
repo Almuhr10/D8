@@ -1,0 +1,464 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  {{ node.body.value|raw }}
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>{{ node.getTitle() }}</title>
+  <!-- Meta -->
+  <!-- Disable screen scaling-->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <style>
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; // Disable ability to click video to pause if used as a background
+    }
+
+    .page-cover .video-container iframe {
+      width: 130%;
+      height: 130%;
+      margin-left: -10%;
+      margin-top: -8%;
+    }
+
+    .animation-element {
+      opacity: 0;
+      position: relative;
+    }
+
+    .animation-element.slide-left {
+      -webkit-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
+      opacity: 0;
+      -moz-transform: translate3d(-100px, 0px, 0px);
+      -webkit-transform: translate3d(-100px, 0px, 0px);
+      -o-transform: translate(-100px, 0px);
+      -ms-transform: translate(-100px, 0px);
+      transform: translate3d(-100px, 0px, 0px);
+    }
+
+    .animation-element.slide-right {
+      -webkit-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      -o-transition: all 500ms ease;
+      transition: all 500ms ease;
+      opacity: 0;
+      -moz-transform: translate3d(100px, 0px, 0px);
+      -webkit-transform: translate3d(100px, 0px, 0px);
+      -o-transform: translate(100px, 0px);
+      -ms-transform: translate(100px, 0px);
+      transform: translate3d(100px, 0px, 0px);
+    }
+
+    .animation-element.slide-left.in-view,
+    .animation-element.slide-right.in-view {
+      opacity: 1;
+      -moz-transform: translate3d(0px, 0px, 0px);
+      -webkit-transform: translate3d(0px, 0px, 0px);
+      -o-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+      transform: translate3d(0px, 0px, 0px);
+    }
+		#video-background {
+			position: fixed;
+  		right: 0;
+  		bottom: 0;
+  		min-width: 100%;
+  		min-height: 100%;
+		}
+  </style>
+
+</head>
+
+<body id="menu" class="body-page">
+
+
+  <!--[if lt IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+  <div class="page-loader" id="page-loader">
+    <div id="lottie"></div>
+  </div>
+  <!-- header Menu -->
+    {% include directory ~ '/partials/header.html.twig' %}
+  <script>
+    // 3. Show/hide menu when icon is clicked
+    var menuItems = $('.all-menu-wrapper .nav-link');
+    var menuIcon = $('.menu-icon, #navMenuIcon');
+    var menuBlock = $('.all-menu-wrapper');
+    var reactToMenu = $('.page-main, .navbar-sidebar, .page-cover, .body-page');
+    var menuLinks = $(".navbar-mainmenu a, .navbar-sidebar a, .navbar-nav-menu a");
+    var menuBg = $(".navbar-mainmenu .mainmenu-bg");
+    // Menu icon clicked
+    menuIcon.on('click', function() {
+      menuIcon.toggleClass('menu-visible');
+      menuBlock.toggleClass('menu-visible');
+      menuItems.toggleClass('menu-visible');
+      reactToMenu.toggleClass('menu-visible');
+      return false;
+    });
+
+
+     $( ".dropdown-about" ).click(function() {
+    $(".submenu-about").toggleClass( "show" );
+  });
+
+     $( ".dropdown-media" ).click(function() {
+    $(".submenu-media").toggleClass( "show" );
+  });
+
+  </script>
+  <!-- END OF site header Menu-->
+  <!-- BEGIN OF page cover -->
+  <div class="page-cover">
+
+    <div class="cover-bg-mask bg-color" data-bgcolor="rgb(254,246,235)"></div>
+  </div>
+  <!--END OF page cover -->
+  <!-- BEGIN OF page main content -->
+  <main class="page-main main-anim scrollpage-container" id="mainpage">
+    <!-- Begin of home section -->
+    <div class="section section-home fullscreen-md main-home section-center content-black pos-relative" data-section="home">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin pt-0">
+        <!-- content -->
+        <div class="section-content anim">
+          <h5 class="anim-blur anim-2">Welcome</h5>
+          <h1 class="display-4 display-title home-title text-no-shadow anim-blur anim-2 mb-4 explore-underline"><span class="">In Drupal Test</span></h1>
+        </div>
+        <div class="section-content anim anim-4 section-sectors">
+         <section class="regular slider anim-blur anim-5">
+            <div>
+              <img src="./themes/custom/innosoft/img/sectors-filled/1.png" alt="sectors-filled-sector1">
+              <h6 class="text-center sector-text">Work</h6>
+            </div>
+            <div>
+              <img src="./themes/custom/innosoft/img/sectors-filled/2.png" alt="sectors-filled-sector4">
+              <h6 class="text-center sector-text">Certificate</h6>
+            </div>
+            <div>
+              <img src="./themes/custom/innosoft/img/sectors-filled/3.png" alt="sectors-filled-sector3">
+              <h6 class="text-center sector-text">Speech</h6>
+            </div>
+            <div>
+              <img src="./themes/custom/innosoft/img/sectors-filled/4.png" alt="sectors-filled-sector14">
+              <h6 class="text-center sector-text">Register</h6>
+            </div>
+            <div>
+              <img src="./themes/custom/innosoft/img/sectors-filled/5.png" alt="sectors-filled-sector2">
+              <h6 class="text-center sector-text">Museum</h6>
+            </div>
+            <div>
+              <img src="./themes/custom/innosoft/img/sectors-filled/6.png" alg= "sectors-filled-sector10">
+              <h6 class="text-center sector-text">Courses</h6>
+            </div>
+              <div>
+              <img src="./themes/custom/innosoft/img/sectors-filled/7.png" alt="sectors-filled-sector5">
+              <h6 class="text-center sector-text">Meettings</h6>
+            </div>
+
+          </section>
+        </div>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of home section -->
+    <!-- Begin of description section -->
+
+    <!-- for mobile -->
+    <div class="section fullscreen-md-off prince-bader-bw no-footer dis-desk" data-section="about-us">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row justify-content-end">
+            <div class="col-12 col-md-9 text-left">
+              <!-- title and description -->
+              <div class="title-desc pr-4">
+                <h2 class="display-5 anim-2">What is Lorem Ipsum?</h2>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <!-- title and description -->
+              <div class="title-desc anim-4">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of description section -->
+
+
+
+    <!-- End of description section -->
+
+    <!-- section -->
+    <div class="section section-list-feature" data-bgcolor="rgb(254,246,235)">
+      <div class="bg-boxes-ar">
+        <!-- Begin of section wrapper -->
+        <div class="section-wrapper with-margin">
+          <!-- content -->
+            <div class="title-desc">
+              <h2 class="display-5 display-title anim-2">About the site</h2>
+            </div>
+
+             <div class="list-items row anim-list pt-4">
+              <div class="item col-12 col-lg-4">
+                <div class="media media-service">
+                  <div class="media-body">
+                    <h4 class="underline-orange">Why?</h4>
+                    <p>
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, ....                  </div>
+                </div>
+              </div>
+              <div class="item col-12 col-lg-4">
+                <div class="media media-service">
+                  <div class="media-body">
+                    <h4 class="underline-orange">Where to find?</h4>
+                    <p>
+Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.                  </div>
+
+                </div>
+              </div>
+              <div class="item col-12 col-lg-4">
+                <div class="media media-service">
+                  <div class="media-body">
+                    <h4 class="underline-orange">What is it about?</h4>
+                    <p>
+This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- End of section wrapper -->
+      </div>
+    </div>
+    <!-- End of list services/features section -->
+    <!-- Begin of slider section -->
+    <div class="section section-slider fullscreen content-white news">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper fullwidth">
+        <!-- begin of slider -->
+        <div class="slider-swiper-beta ">
+          <!-- slider -->
+          <div class="swiper-container slider-container">
+            <div class="item-list swiper-wrapper">
+              <!-- item -->
+              <div class="swiper-slide">
+         <div class="media-slide-item-beta">
+           <div class="media-bg bg-color" data-bgcolor="#96C0CE"></div>
+           <div class="media-content text-anim">
+             <div class="row justify-content-between">
+               <div class="col col-12 col-md-6 col-lg-6 order-lg-2">
+                 <div class="media-image">
+                   <img class="img-block-off" src="./themes/custom/innosoft/img/newsimg1.jpg">
+                 </div>
+               </div>
+               <div class="col center-v col-12 col-md-6 col-lg-6 order-lg-1">
+                 <div class="media-body text-justify">
+                   <h4 class="">News</h4>
+                   <h4 class="news-title">News one</h4>
+  <p>This is news one description.
+                   </p>
+                 </p>			              <div class="btns-action"><a class="btn btn-line" href="news-details10-en.html" title="news">
+           <span class="text">read more</span>
+                                      </a>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+
+
+            </div>
+          </div>
+          <!-- slider navigation -->
+          <nav class="items-navigation">
+            <div class="items-pagination bar"></div>
+            <div class="items-buttons">
+              <div class="items-button-prev"><a class="btn btn-transp-arrow " title="Read More" href="">
+                           <i class="icon">
+                           <span class="arrow-left"></span>
+                           </i>
+                           <span class="text">Prev</span>
+                           </a>
+              </div>
+              <div class="items-button-next"><a class="btn btn-transp-arrow " title="Read More" href="">
+                           <span class="text">Next</span>
+                           <i class="icon">
+                           <span class="arrow-right"></span>
+                           </i>
+                           </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- end of slider slider-swiper-beta -->
+      </div>
+    </div>
+    <!-- End of slider section -->
+    <!-- footer section -->
+
+             <div class="section section-contact moc1 text-white footer-p" data-section="contact-info">
+                <!-- Begin of section wrapper -->
+                <div class="section-wrapper with-margin">
+                   <div class="section-content">
+                      <div class="row">
+                         <!-- begin of title content -->
+                         <div class="col-12 col-lg-6 col-md-6">
+                            <div class="title-desc">
+                               <h5 class="under-line">Contact</h5>
+                            </div>
+                            <!-- Action button -->
+                            <div class="pt-3">
+                               <div class="footer-icons">
+                                  <i class="fa fa-map-marker pr-2"></i>
+                                  <p class="pl-4">Eastern province, Alkhobar </p>
+                               </div>
+
+                               <div class="footer-icons">
+                                  <i class="fa fa-phone pr-2"></i>
+                                 <a class="phone-footer" href="tel:8001189999">0000000000</a>
+                               </div>
+                               <div class="footer-icons">
+                                  <i class="fa fa-envelope pr-2"></i>
+                                 <a class="phone-footer" href="mailto:info@innosoft.sa">info@innosoft.me</a>
+                               </div>
+                               <div class="icons icons-margin pt-1">
+                                  <a class="btn-icon pl-0 ml-0" target="_blank" href="https://twitter.com/innosoftsa">
+                                  <i class="icon fa fa-twitter"></i>
+                                  </a>
+                                  <a class="btn-icon" target="_blank" href="https://instagram.com/innosoftsa">
+                                  <i class="icon fa fa-instagram"></i>
+                                  </a>
+                                  <a class="btn-icon" target="_blank" href="https://www.youtube.com/channel/UCfvsrHbBEeuyqDWll07ZeQg">
+                                  <i class="icon fa fa-youtube"></i>
+                                  </a>
+                                  <a class="btn-icon" target="_blank" href="https://facebook.com/innosoftsa">
+                                  <i class="icon fa fa-facebook"></i>
+                                  </a>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <!-- End of section wrapper -->
+             </div>
+
+     <div class="section section-contact text-white" style="background: #3F4251;" data-section="contact-info">
+                <!-- Begin of section wrapper -->
+                <div class="section-wrapper with-margin py-3">
+                   <div class="section-content">
+                      <div class="row">
+                         <div class="col-md-6">
+                            <p class="copyright text-center-mob">2019 © All rights reserved </p>
+                         </div>
+
+                      </div>
+                   </div>
+                </div>
+             </div>
+    <!-- End of footer section -->
+
+  </main>
+
+  <script>
+    jQuery(".regular").slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4500,
+      slidesToShow: 5,
+      slidesToScroll: 2,
+      dots: true,
+      arrows: false,
+      responsive: [{
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ],
+      customPaging: function(slider, i) {
+        return '<div class="pager__item" > </div>';
+      },
+      useTransform: true,
+      cssEase: "ease-in-out"
+    });
+  </script>
+  <script>
+    $(function() {
+      $("#header").load("header-home-en");
+      $("#footer").load("footer-en");
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+
+      var $animation_elements = $('.animation-element');
+      var $window = $(window);
+
+      function check_if_in_view() {
+        var window_height = $window.height();
+        var window_top_position = $window.scrollTop();
+        var window_bottom_position = (window_top_position + window_height);
+
+        $.each($animation_elements, function() {
+          var $element = $(this);
+          var element_height = $element.outerHeight();
+          var element_top_position = $element.offset().top;
+          var element_bottom_position = (element_top_position + element_height);
+
+          //check to see if this current container is within viewport
+          if ((element_bottom_position >= window_top_position) &&
+            (element_top_position <= window_bottom_position)) {
+            $element.addClass('in-view');
+          } else {
+            $element.removeClass('in-view');
+          }
+        });
+      }
+
+      $window.on('scroll resize', check_if_in_view);
+      $window.trigger('scroll', check_if_in_view);
+    });
+  </script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

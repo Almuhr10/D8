@@ -1,0 +1,99 @@
+{{ page.header }}
+<header class="section page-header navbar page-header-drawer anim-2 anim-blur dis-desk ar-header">
+    <div class="section-wrapper with-margin">
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-10 col-xl-10 col-lg-10">
+            <ul class="nav-item" style="padding-right: 0 !important;">
+              <li><a class="nav-link" href="./homepage">الرئيسية</a></li>
+
+              <li><a href="./media-center" class="nav-link">المركز الإعلامي</a>
+
+              </li>
+                          <li><a class="nav-link" href="./calendar">التقويم</a></li>
+
+              <li><a class="nav-link" href="./faq">الأسئلة الشائعة</a></li>
+              <li><a class="nav-link english-menu" href="./home-en">English</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-xl-2 col-lg-2 text-left">
+            <div class="brand">
+
+              <a class="" href="https://innosoft.com.sa/" target="_blank">
+                <!-- Arrows scroll down/up -->
+                <span class="logo">
+                    <img class="light-logo" src="themes/custom/innosoft/img/logo_dark.png" alt="Logo">
+                    </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <script>
+    $('ul.nav-item li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(200);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(200);
+    });
+  </script>
+
+
+
+  <header class="page-header navbar page-header-drawer menu-right logo-left topmenu-left dis-mob ar-header-mob">
+      <!-- Begin of logo/brand -->
+    <a class="navbar-brand navbar-brand-inner" href="index.html">
+      <!-- Arrows scroll down/up -->
+      <span class="logo">
+              <img class="light-logo" src="themes/custom/innosoft/img/logo_dark.png" alt="Logo">
+              </span>
+    </a>
+    <!-- End of logo/brand -->
+    <!-- Begin of menu icon toggler -->
+    <button class="navbar-toggler site-menu-icon" id="navMenuIcon">
+              <!-- Available class : menu-icon-dot / menu-icon-line-->
+              <span class="menu-icon menu-icon-line">
+              <span class="text show-menu-visible">إغلاق</span>
+              <span class="text hide-menu-visible">القائمة</span>
+              <span class="bars">
+              <span class="bar1"></span>
+              <span class="bar2"></span>
+              <span class="bar3"></span>
+              </span>
+              </span>
+           </button>
+    <!-- End of menu icon toggler -->
+
+    <!-- begin of menu wrapper -->
+    <div class="all-menu-wrapper" id="navbarMenu">
+      <!-- Begin of hamburger mainmenu menu -->
+      <nav class="navbar-mainmenu">
+        <div class="mainmenu-bg"></div>
+        <div class="mainmenu-content">
+          <ul class="navbar-nav">
+
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">الرئيسية</a>
+
+
+            <li class="nav-item"><a href="media-center.html" class="nav-link">المركز الإعلامي</a>
+
+            </li>
+                 <li class="nav-item">
+              <a class="nav-link" href="calendar.html">التقويم</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">الأسئلة الشائعة</a>
+            </li>
+
+            <li class="nav-item pt-4-mob"><a class="nav-link english-menu" >English</a></li>
+          </ul>
+
+        </div>
+      </nav>
+      <!-- End of hamburger mainmenu menu -->
+    </div>
+    <!-- end of menu wrapper -->
+  </header>

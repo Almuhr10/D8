@@ -1,0 +1,158 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  {{ node.body.value|raw }}
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <!-- Page Title Here -->
+  <title> {{ node.getTitle() }} </title>
+</head>
+<body id="menu" class="body-page">
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="page-loader">
+    <div id="lottie"></div>
+
+
+  </div>
+  <!-- BEGIN OF site header Menu -->
+  {% include directory ~ '/partials/header.html.twig' %}
+  <script>
+    // 3. Show/hide menu when icon is clicked
+    var menuItems = $('.all-menu-wrapper .nav-link');
+    var menuIcon = $('.menu-icon, #navMenuIcon');
+    var menuBlock = $('.all-menu-wrapper');
+    var reactToMenu = $('.page-main, .navbar-sidebar, .page-cover, .body-page');
+    var menuLinks = $(".navbar-mainmenu a, .navbar-sidebar a, .navbar-nav-menu a");
+    var menuBg = $(".navbar-mainmenu .mainmenu-bg");
+    // Menu icon clicked
+    menuIcon.on('click', function() {
+      menuIcon.toggleClass('menu-visible');
+      menuBlock.toggleClass('menu-visible');
+      menuItems.toggleClass('menu-visible');
+      reactToMenu.toggleClass('menu-visible');
+      return false;
+    });
+
+    $(".dropdown-about").click(function() {
+      $(".submenu-about").toggleClass("show");
+    });
+
+    $(".dropdown-media").click(function() {
+      $(".submenu-media").toggleClass("show");
+    });
+  </script>
+  <!-- END OF site header Menu-->
+  <!-- BEGIN OF page cover -->
+  <div class="page-cover">
+  </div>
+  <!--END OF page cover -->
+  <!-- BEGIN OF page main content -->
+
+  <main class="page-main main-anim scrollpage-container " id="mainpage">
+    <!-- Begin of description section -->
+    <div class="section content-white cover-margin bg-color" data-section="list-features"  data-bgcolor="#C25B56">
+
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row">
+            <div class="col-12">
+              <div class="article article-light header-title">
+                <div class="breadcrumb-cont">
+                  <ol class="breadcrumb">
+                    <div class="breadcrumb-cont">
+                      <ol class="breadcrumb">
+                        <li><a href="./homepage">الرئيسية</a><span class="breadcrumb-arrow"></li>
+                      </ol>
+                    </div>
+                  </ol>
+                </div>
+                <h2 class="display-3">المركز الإعلامي</h2>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- End of section wrapper -->
+    </div>
+
+    <div class="section">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+        <!-- content -->
+        <div class="section-content anim">
+
+
+          <div class="row">
+            <div class="col-md-10 col-9">
+               <h1 class="underline-orange pos-relative">الأخبار</h1>
+            </div>
+            <div class="col-md-2 col-3">
+                <div class="form-group">
+                    <button onclick="location.href='./news'" class="btn btn-block btn-outline-white">المزيد</button>
+                  </div>
+            </div>
+          </div>
+            <div class="row pt-3">
+
+            <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box">
+              <div class="card news-box">
+                <div class="card-body pb-news-15">
+                  <article class="media-item news">
+                    <a title="news1" href="./news-details13" class="media-image">
+                      <div class="news-img">  <img src="./themes/custom/innosoft/img/newsimg1.jpg" class="img-fluid" ></div>
+                    </a>
+                    <h3 class="media-content px-15 title"><a title="news" href="./news-details13">الخبر الأول</a></h3>
+                    <div class="media-meta px-15"><span class="meta-item date">الخميس، 18 <span class="month1">أبريل</span><span class="year1">2019</span></span></div>
+                  </article>
+                </div>
+              </div>
+            </div>
+             <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box">
+              <div class="card news-box">
+                <div class="card-body pb-news-15">
+                  <article class="media-item news">
+                    <a title="news1" href="./news-details16" class="media-image">
+                      <div class="news-img">  <img src="./themes/custom/innosoft/img/newsimg2.jpg" class="img-fluid"></div>
+                    </a>
+                    <h3 class="media-content px-15 title"><a title="news2" href="./news-details16">الخبر الثاني</a></h3>
+                    <div class="media-meta px-15"><span class="meta-item date">الخميس، 18 <span class="month1">أبريل</span><span class="year1">2019</span></span></div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+			<div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box">
+			  <div class="card news-box">
+			    <div class="card-body pb-news-15">
+			      <article class="media-item news">
+			        <a title="news1" href="news-details14.html" class="media-image">
+			          <div class="news-img"> <img src="./themes/custom/innosoft/img/newsimg3.jpg" class="img-fluid"></div>
+			        </a>
+			        <h3 class="media-content px-15 title"><a title="news2" href="news-details14">الخبر الثالث</a></h3>
+			        <div class="media-meta px-15"><span class="meta-item date">الاثنين، 15 <span class="month1">أبريل</span><span class="year1">2019</span></span></div>
+			      </article>
+			    </div>
+			  </div>
+			</div>
+          </div>
+        <!-- End of section wrapper -->
+      </div>
+      <!-- End of description section -->
+      <div id="footer"></div>
+  </main>
+  <!-- END OF page main content -->
+  {% include directory ~ '/partials/footer.html.twig' %}
+  <script>
+    $(function() {
+      $("#header").load("header");
+      $("#footer").load("footer");
+    });
+  </script>
+</body>
+</html>

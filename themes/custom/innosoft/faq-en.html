@@ -1,0 +1,335 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <!-- Page Title Here -->
+  <title>FAQs</title>
+
+  <!-- Web fonts and Web Icons -->
+  <link rel="stylesheet" href="./fonts/ionicons.min.css">
+  <link rel="stylesheet" href="./fonts/font-awesome.min.css">
+  <!-- Vendor CSS style -->
+  <!-- Uncomment below to load individualy vendor CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./js/vendor/swiper.min.css">
+  <link rel="stylesheet" href="./js/vendor/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="./js/vegas/vegas.min.css">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- add alt layout here -->
+  <link rel="stylesheet" href="./css/style-1.css">
+  <script src="./js/vendor/modernizr-2.7.1.min.js"></script>
+        <script src="./js/GTM.js"></script>
+
+</head>
+
+<body id="menu" class="body-page">
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="page-loader">
+    <div id="lottie"></div>
+
+
+  </div>
+  <!-- BEGIN OF site header Menu -->
+  <header class="section page-header navbar page-header-drawer inner-header dis-desk en-header">
+    <div class="section-wrapper with-margin">
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-9 col-xl-9 col-lg-10">
+            <ul class="nav-item" style="padding-left: 0 !important;">
+              <li><a class="nav-link" href="index-en.html">Home</a></li>
+              <li><a class="nav-link" href="media-center-en.html">Media Center</a>
+              </li>
+                          <li><a class="nav-link" href="calendar-en.html">Calendar</a></li>
+
+              <li><a class="nav-link" href="faq-en.html">FAQ</a></li>
+               <li><a class="nav-link arabic-menu">عربي</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-xl-3 col-lg-2 text-right">
+            <div class="brand">
+
+              <a class="" href="index-en.html">
+                <!-- Arrows scroll down/up -->
+                <span class="logo">
+                    <img class="light-logo" src="img/logo_dark.png" alt="Logo">
+                    </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <script>
+    $('ul.nav-item li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(200);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(200);
+    });
+  </script>
+
+
+
+  <header class="page-header navbar page-header-drawer menu-left logo-right topmenu-right dis-mob en-header-mob">
+    <!-- Begin of menu icon toggler -->
+    <button class="navbar-toggler site-menu-icon" id="navMenuIcon">
+              <!-- Available class : menu-icon-dot / menu-icon-line-->
+              <span class="menu-icon menu-icon-line">
+                  <span class="bars">
+              <span class="bar1"></span>
+              <span class="bar2"></span>
+              <span class="bar3"></span>
+              </span>
+              <span class="text show-menu-visible">Close</span>
+              <span class="text hide-menu-visible">Menu</span>
+
+              </span>
+           </button>
+    <!-- End of menu icon toggler -->
+    <!-- Begin of logo/brand -->
+    <a class="navbar-brand navbar-brand-inner" href="index-en.html">
+      <!-- Arrows scroll down/up -->
+      <span class="logo">
+              <img class="light-logo" src="img/logo_dark.png" alt="Logo">
+              </span>
+    </a>
+    </div>
+    <!-- End of logo/brand -->
+    <!-- begin of menu wrapper -->
+    <div class="all-menu-wrapper" id="navbarMenu">
+      <!-- Begin of hamburger mainmenu menu -->
+     <nav class="navbar-mainmenu">
+        <div class="mainmenu-bg"></div>
+        <div class="mainmenu-content">
+          <ul class="navbar-nav">
+
+            <li class="nav-item">
+              <a class="nav-link" href="media-center-en.html">Media Center</a>
+
+            </li>
+
+               <li class="nav-item">
+              <a class="nav-link" href="calendar-en.html">Calendar</a>
+            </li>
+               <li class="nav-item">
+              <a class="nav-link" href="faq-en.html">FAQ</a>
+            </li>
+             <li class="nav-item pt-4-mob">
+              <a class="nav-link arabic-menu">عربي</a>
+            </li>
+          </ul>
+          <div class="navbar-footer">
+            <div class="row no-gutters">
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End of hamburger mainmenu menu -->
+    </div>
+    <!-- end of menu wrapper -->
+  </header>
+  <script>
+    // 3. Show/hide menu when icon is clicked
+    var menuItems = $('.all-menu-wrapper .nav-link');
+    var menuIcon = $('.menu-icon, #navMenuIcon');
+    var menuBlock = $('.all-menu-wrapper');
+    var reactToMenu = $('.page-main, .navbar-sidebar, .page-cover, .body-page');
+    var menuLinks = $(".navbar-mainmenu a, .navbar-sidebar a, .navbar-nav-menu a");
+    var menuBg = $(".navbar-mainmenu .mainmenu-bg");
+    // Menu icon clicked
+    menuIcon.on('click', function() {
+      menuIcon.toggleClass('menu-visible');
+      menuBlock.toggleClass('menu-visible');
+      menuItems.toggleClass('menu-visible');
+      reactToMenu.toggleClass('menu-visible');
+      return false;
+    });
+
+
+     $( ".dropdown-about" ).click(function() {
+    $(".submenu-about").toggleClass( "show" );
+  });
+
+     $( ".dropdown-media" ).click(function() {
+    $(".submenu-media").toggleClass( "show" );
+  });
+
+  </script>
+  <!-- END OF site header Menu-->
+  <!-- BEGIN OF page cover -->
+  <div class="page-cover">
+  </div>
+  <!--END OF page cover -->
+  <!-- BEGIN OF page main content -->
+
+  <main class="page-main main-anim scrollpage-container " id="mainpage">
+    <!-- Begin of description section -->
+    <div class="section content-white cover-margin" data-section="list-features">
+      <div class="section-cover item-cover">
+        <img class="img-block" src="./img/headers/FAQ.jpeg" alt="cover">
+      </div>
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row">
+            <div class="col-12">
+             <div class="article article-light header-title">
+                <div class="breadcrumb-cont">
+                  <ol class="breadcrumb">
+                    <div class="breadcrumb-cont">
+                      <ol class="breadcrumb">
+                        <li><a title="home" href="index-en">Home</a></li>
+                      </ol>
+                    </div>
+                  </ol>
+                </div>
+                <h1 class="display-3">FAQ</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of description section -->
+
+    <!-- Begin of article section -->
+    <div class="section " data-section="list-features">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+        <!-- content -->
+        <div class="section-content anim">
+          <div id="accordion">
+            <div class="row">
+              <div class="col-md-12 col-12 pt-3  ">
+                <div class="card">
+                <h5 class="card-header mb-0 coll-icon" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  What is Lorem Ipsum?
+                </h5>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+
+                  <p>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.                  </p>
+
+                </div>
+                  </div>
+                </div>
+              </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of section wrapper -->
+    </div>
+    <!-- End of article section -->
+
+    <!-- footer section -->
+
+             <div class="section section-contact moc1 text-white footer-p" data-section="contact-info">
+                <!-- Begin of section wrapper -->
+                <div class="section-wrapper with-margin">
+                   <div class="section-content">
+                      <div class="row">
+                         <!-- begin of title content -->
+                         <div class="col-12 col-lg-6 col-md-6">
+                            <div class="title-desc">
+                               <h5 class="under-line">Contact</h5>
+                            </div>
+                            <!-- Action button -->
+                            <div class="pt-3">
+                               <div class="footer-icons">
+                                  <i class="fa fa-map-marker pr-2"></i>
+                                  <p class="pl-4">Eastern province, Alkhobar </p>
+                               </div>
+
+                               <div class="footer-icons">
+                                  <i class="fa fa-phone pr-2"></i>
+                                 <a class="phone-footer" href="tel:8001189999">0000000000</a>
+                               </div>
+                               <div class="footer-icons">
+                                  <i class="fa fa-envelope pr-2"></i>
+                                 <a class="phone-footer" href="mailto:info@innosoft.sa">info@innosoft.me</a>
+                               </div>
+                               <div class="icons icons-margin pt-1">
+                                  <a class="btn-icon pl-0 ml-0" target="_blank" href="https://twitter.com/innosoftsa">
+                                  <i class="icon fa fa-twitter"></i>
+                                  </a>
+                                  <a class="btn-icon" target="_blank" href="https://instagram.com/innosoftsa">
+                                  <i class="icon fa fa-instagram"></i>
+                                  </a>
+                                  <a class="btn-icon" target="_blank" href="https://www.youtube.com/channel/UCfvsrHbBEeuyqDWll07ZeQg">
+                                  <i class="icon fa fa-youtube"></i>
+                                  </a>
+                                  <a class="btn-icon" target="_blank" href="https://facebook.com/innosoftsa">
+                                  <i class="icon fa fa-facebook"></i>
+                                  </a>
+
+                               </div>
+                            </div>
+                         </div>
+
+
+                      </div>
+                   </div>
+                </div>
+                <!-- End of section wrapper -->
+             </div>
+
+     <div class="section section-contact text-white" style="background: #3F4251;" data-section="contact-info">
+                <!-- Begin of section wrapper -->
+                <div class="section-wrapper with-margin py-3">
+                   <div class="section-content">
+                      <div class="row">
+                         <div class="col-md-6">
+                            <p class="copyright text-center-mob">2019 © All rights reserved </p>
+                         </div>
+
+                      </div>
+                   </div>
+                </div>
+             </div>
+    <!-- End of footer section -->
+
+
+  </main>
+  <!-- END OF page main content -->
+
+  <!-- scripts -->
+  <!-- All Javascript plugins goes here -->
+  <script src="./js/vendor/jquery-1.12.4.min.js"></script>
+  <!-- All vendor scripts -->
+  <script src="./js/vendor/scrolloverflow.min.js"></script>
+  <script src="./js/vendor/all.js"></script>
+  <script src="./js/particlejs/particles.min.js"></script>
+  <!-- Countdown script -->
+  <script src="./js/jquery.downCount.js"></script>
+  <!-- Form script -->
+  <script src="./js/form_script.js"></script>
+  <!-- Javascript main files -->
+  <script src="./js/main.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+
+  <script>
+    $(function() {
+      $("#header").load("header-en");
+      $("#footer").load("footer-en");
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+global-css:
+  css:
+    theme:
+      css/aos.css: {}
+      css/bootstrap.css: {}
+      css/bootstrap-rtl.css: {}
+      css/bootstrap.min.css: {}
+      css/chocolat.css: {}
+      css/demo.css: {}
+      css/frame.css: {}
+      css/fullcalendar.min.css: {}
+      css/imagelightbox.css: {}
+      css/infinite-scroll-docs.css: {}
+      css/lightgallery.css: {}
+      css/main.css: {}
+      css/pageloader.css: {}
+      css/rtl.css: {}
+      css/style-1.css: {}
+      css/style-bg.css: {}
+      css/style-default.css: {}
+      css/style-font.css: {}
+
+global-js:
+  js:
+    js/aos.js: {}
+    js/ar.js: {}
+    js/bootstrap.js: {}
+    js/bootstrap.min.js: {}
+    js/cal-details.js: {}
+    js/custom.js: {}
+    js/custom2.js: {}
+    js/custom2-en.js: {}
+    js/date.js: {}
+    js/date-en.js: {}
+    js/form_script.js: {}
+    js/fullcalendar.min.js: {}
+    js/greg_hijrah_calender.js: {}
+    js/GTM.js: {}
+    js/GTM_BACK.js: {}
+    js/hijrah-date.min.js: {}
+    js/index.js: {}
+    js/infinite-scroll-docs.min.js: {}
+    js/jquery.chocolat.js: {}
+    js/jquery.downCount.js: {}
+    js/lightgallery-all.min.js: {}
+    js/list.min.js: {}
+    js/loader.js: {}
+    js/main.js: {}
+    js/media.js: {}
+    js/media-en.js: {}
+    js/moment.min.js: {}
+    js/news.js: {}
+    js/news-details.js: {}
+    js/picturefill.min.js: {}
+    js/select2.min.js: {}
+
+  dependencies:
+    - core/jquery

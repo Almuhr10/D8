@@ -1,0 +1,19 @@
+name: Innosoft
+description: Drupal 8 Custom Theme
+type: theme
+package: Custom 
+core: 8.x
+# base theme: classy
+libraries:
+  - innosoft/global-css
+  - innosoft/global-js
+stylesheets-remove:
+  - core/themes/stable/css/views/views.module.css
+  - core/themes/stable/css/system/components/align.module.css
+
+regions: 
+  content: Contnet
+  header: Header 
+  footer: Footer
+  sidebar: Sidebar 
+  breadcrumb: Breadcrumb

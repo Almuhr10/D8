@@ -1,0 +1,489 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+  <!-- Page Title Here -->
+  <title>التقويم</title>
+  <!-- Web fonts and Web Icons -->
+  <link rel="stylesheet" href="./fonts/ionicons.min.css">
+  <link rel="stylesheet" href="./fonts/font-awesome.min.css">
+  <!-- Vendor CSS style -->
+  <!-- Uncomment below to load individualy vendor CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./js/vendor/swiper.min.css">
+  <link rel="stylesheet" href="./js/vendor/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="./js/vegas/vegas.min.css">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- lightgallery -->
+  <link href="./css/lightgallery.css" rel="stylesheet">
+
+  <!-- add alt layout here -->
+  <link rel="stylesheet" href="./css/style-1.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-rtl.css">
+  <link rel="stylesheet" type="text/css" href="css/rtl.css">
+  <script src="./js/vendor/modernizr-2.7.1.min.js"></script>
+  <link href='./css/fullcalendar.min.css' rel='stylesheet' />
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+        <script src="./js/GTM.js"></script>
+</head>
+
+<body id="menu" class="body-page">
+
+  <!-- BEGIN OF site header Menu -->
+  <!-- BEGIN OF site header Menu -->
+  <header class="section page-header navbar page-header-drawer anim-2 anim-blur dis-desk ar-header">
+    <div class="section-wrapper with-margin">
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-10 col-xl-10 col-lg-10">
+            <ul class="nav-item" style="padding-right: 0 !important;">
+              <li><a class="nav-link" href="index.html">الرئيسية</a></li>
+
+              <li><a href="media-center.html" class="nav-link">المركز الإعلامي</a>
+
+              </li>
+                          <li><a class="nav-link" href="calendar.html">التقويم</a></li>
+
+              <li><a class="nav-link" href="faq.html">الأسئلة الشائعة</a></li>
+              <li><a class="nav-link english-menu" href="index-en.html">English</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-xl-2 col-lg-2 text-left">
+            <div class="brand">
+
+              <a class="" href="https://innosoft.com.sa/">
+                <!-- Arrows scroll down/up -->
+                <span class="logo">
+                    <img class="light-logo" src="img/logo_dark.png" alt="Logo">
+                    </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <script>
+    $('ul.nav-item li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(200);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(200);
+    });
+  </script>
+
+
+
+  <header class="page-header navbar page-header-drawer menu-right logo-left topmenu-left dis-mob ar-header-mob">
+      <!-- Begin of logo/brand -->
+    <a class="navbar-brand navbar-brand-inner" href="index">
+      <!-- Arrows scroll down/up -->
+      <span class="logo">
+              <img class="light-logo" src="img/logo_dark.png" alt="Logo">
+              </span>
+    </a>
+    <!-- End of logo/brand -->
+    <!-- Begin of menu icon toggler -->
+    <button class="navbar-toggler site-menu-icon" id="navMenuIcon">
+              <!-- Available class : menu-icon-dot / menu-icon-line-->
+              <span class="menu-icon menu-icon-line">
+              <span class="text show-menu-visible">إغلاق</span>
+              <span class="text hide-menu-visible">القائمة</span>
+              <span class="bars">
+              <span class="bar1"></span>
+              <span class="bar2"></span>
+              <span class="bar3"></span>
+              </span>
+              </span>
+           </button>
+    <!-- End of menu icon toggler -->
+
+    <!-- begin of menu wrapper -->
+    <div class="all-menu-wrapper" id="navbarMenu">
+      <!-- Begin of hamburger mainmenu menu -->
+      <nav class="navbar-mainmenu">
+        <div class="mainmenu-bg"></div>
+        <div class="mainmenu-content">
+          <ul class="navbar-nav">
+
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">الرئيسية</a>
+
+
+            <li class="nav-item"><a href="media-center.html" class="nav-link">المركز الإعلامي</a>
+
+            </li>
+                 <li class="nav-item">
+              <a class="nav-link" href="calendar.html">التقويم </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">الأسئلة الشائعة</a>
+            </li>
+
+            <li class="nav-item pt-4-mob"><a class="nav-link english-menu" >English</a></li>
+          </ul>
+
+        </div>
+      </nav>
+      <!-- End of hamburger mainmenu menu -->
+    </div>
+    <!-- end of menu wrapper -->
+  </header>
+  <script>
+    // 3. Show/hide menu when icon is clicked
+    var menuItems = $('.all-menu-wrapper .nav-link');
+    var menuIcon = $('.menu-icon, #navMenuIcon');
+    var menuBlock = $('.all-menu-wrapper');
+    var reactToMenu = $('.page-main, .navbar-sidebar, .page-cover, .body-page');
+    var menuLinks = $(".navbar-mainmenu a, .navbar-sidebar a, .navbar-nav-menu a");
+    var menuBg = $(".navbar-mainmenu .mainmenu-bg");
+    // Menu icon clicked
+    menuIcon.on('click', function() {
+      menuIcon.toggleClass('menu-visible');
+      menuBlock.toggleClass('menu-visible');
+      menuItems.toggleClass('menu-visible');
+      reactToMenu.toggleClass('menu-visible');
+      return false;
+    });
+
+    $(".dropdown-about").click(function() {
+      $(".submenu-about").toggleClass("show");
+    });
+
+    $(".dropdown-media").click(function() {
+      $(".submenu-media").toggleClass("show");
+    });
+  </script>
+  <!-- END OF site header Menu-->
+  <!-- BEGIN OF page cover -->
+  <div class="page-cover">
+  </div>
+  <!--END OF page cover -->
+  <!-- BEGIN OF page main content -->
+
+  <main class="page-main main-anim scrollpage-container " id="mainpage">
+    <!-- Begin of description section -->
+    <div class="section content-white cover-margin" data-section="list-features">
+      <div class="section-cover item-cover">
+        <img class="img-block" src="./img/headers/Calendar.png" alt="cover">
+      </div>
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row">
+            <div class="col-12">
+              <div class="article article-light header-title">
+                <div class="breadcrumb-cont">
+                  <ol class="breadcrumb">
+                    <div class="breadcrumb-cont">
+                      <ol class="breadcrumb">
+                        <li><a title="home" href="index.html">الرئيسية</a></li>
+                      </ol>
+                    </div>
+                  </ol>
+                </div>
+                <h1 class="display-3">التقويم</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <div class="section">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row">
+            <div class="col-12">
+              <div class="article article-light header-title text-dark-blue">
+                <h3 class="display-4 text-dark-blue mb-4">
+                  معرض شركة انوسوفت
+                </h3>
+              </div>
+            </div>
+          </div>
+
+         <div class="event-body">
+             <div class="description">
+
+                    <p>
+                      العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة، وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.
+
+                    </p>
+
+                  </div>
+	 								<div class="time-cont justify-content-between">
+                      <div class=" mt-4 start-time-cont  d-flex row">
+                          <div class="start-cont col-md-6 col-lg-6">
+                              <h4 class="w-100 underline-orange pos-relative mb-4"> <i class="fa  fa-calendar"> </i>   فترة المعرض  </h4>
+
+                              <span class="start">
+                               18  يناير
+                              </span>
+
+                           <span class="end"> -  18 يناير 2019    </span>
+                          </div>
+
+                          <div class="startTime-cont mt-4 mt-md-0 col-md-6 col-lg-6">
+                              <h4 class="w-100 underline-orange pos-relative mb-4"> <i class="fa  fa-clock-o"> </i> مواعيد الزيارة</h4>
+                              <div class="start-time">
+
+                               4 مساءً - 10 مساءً </div>
+                          </div>
+
+												<div class="startTime-cont mt-4 mt-md-0 col-md-6 col-lg-6">
+                              <h4 class="w-100 underline-orange pos-relative mb-4"> <i class="fa  fa-clock-o"> </i> مواعيد شهر رمضان المبارك</h4>
+                              <div class="start-time">
+
+                               8 مساءً - 2 صباحاً </div>
+                          </div>
+
+													<div class="startTime-cont mt-4 mt-md-0 col-md-6 col-lg-6">
+                              <h4 class="w-100 underline-orange pos-relative mb-4"><i class="fa fa-map-marker"> </i> الموقع</h4>
+                      <span class="place">   شركة انوسوفت - حي العليا، الخبر. </span>
+                          </div>
+
+
+                      </div>
+
+                  </div>
+
+                  <div class="place-cont  mt-4">
+
+
+                        <div class="event-map mt-4">
+
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3576.7527726427957!2d50.1745322!3d26.3021135!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49ef337eccc407%3A0xff080967267c84d7!2sInnosoft!5e0!3m2!1sen!2ssa!4v1578481471801!5m2!1sen!2ssa" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+
+                    </div>
+
+                  <div class="">
+                      <div class="event-media-cont mt-5"><h4 class="w-100 underline-orange pos-relative mb-4">
+                  معرض الصور
+                      </h4>  </div>
+
+                <div class="row pt-3" id="event-mediacenter">
+                <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box pt-3-mob   ">
+                  <div class="card">
+                    <div class="card-body p-0">
+                      <article class="media-item pos-relative item" data-src="img/eventimg.png" >
+                        <div class="news-img multimedia-img ">
+                        <a href="img/eventimg.png" data-poster="img/eventimg.png" >
+                         <img src="img/eventimg.png" class="img-fluid" /></a>
+
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+
+                    <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box pt-3-mob   ">
+                  <div class="card">
+                    <div class="card-body p-0">
+                      <article class="media-item pos-relative item" data-src="img/DSC_0864.png" >
+                        <div class="news-img multimedia-img ">
+                        <a href="img/DSC_0864.png" data-poster="img/DSC_0864.png" >
+                         <img src="img/DSC_0864.png" class="img-fluid" /></a>
+
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box pt-3-mob   ">
+                  <div class="card">
+                    <div class="card-body p-0">
+                      <article class="media-item pos-relative item" data-src="img/DSC_0919.png" >
+                        <div class="news-img multimedia-img ">
+                        <a href="img/DSC_0919.png" data-poster="img/DSC_0919.png" >
+                         <img src="img/DSC_0919.png" class="img-fluid" /></a>
+
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                         <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box pt-3-mob   ">
+                  <div class="card">
+                    <div class="card-body p-0">
+                      <article class="media-item pos-relative item" data-src="img/DSC_0978.png" >
+                        <div class="news-img multimedia-img ">
+                        <a href="img/DSC_0978.png" data-poster="img/DSC_0978.png" >
+                         <img src="img/DSC_0978.png" class="img-fluid" /></a>
+
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box pt-3-mob   ">
+                  <div class="card">
+                    <div class="card-body p-0">
+                      <article class="media-item pos-relative item" data-src="img/DSC_1123.png" >
+                        <div class="news-img multimedia-img ">
+                        <a href="img/DSC_1123.png" data-poster="img/DSC_1123.png" >
+                         <img src="img/DSC_1123.png" class="img-fluid" /></a>
+
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                  <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box pt-3-mob   ">
+                  <div class="card">
+                    <div class="card-body p-0">
+                      <article class="media-item pos-relative item" data-src="img/DSC_1182.png" >
+                        <div class="news-img multimedia-img ">
+                        <a href="img/DSC_1182.png" data-poster="img/DSC_1182.png" >
+                         <img src="img/DSC_1182.png" class="img-fluid" /></a>
+
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+
+          </div>
+                  </div>
+              </div>
+
+          <div class="row pt-5">
+             <div class="col-xl-12 col-lg-12">
+              <div class="sm-share-box">
+                <span class="btn-share dis-none"></span>
+
+                <ul>
+                  <li><a class="facebook-share" data-js="facebook-share" href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li><a class="twitter-share" data-js="twitter-share" href="" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li class="hidden-lg"><a href="whatsapp://send?text=/calendarDetails.html" data-action="share/whats  app/share">
+                  <i class="fa fa-whatsapp"></i></a></li>
+                  <li><a class="print-button"><i class="fa fa-print"></i></a></li>
+                  <li><a href="mailto:?subject=معرض شركة انوسوفت&amp;body=/calendarDetails.html" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-contact moc1 text-white footer-p" data-section="contact-info">
+       <!-- Begin of section wrapper -->
+       <div class="section-wrapper with-margin">
+          <div class="section-content">
+             <div class="row">
+                <!-- begin of title content -->
+                <div class="col-12 col-lg-6 col-md-6">
+                   <div class="title-desc">
+                      <h5 class="under-line">التواصل</h5>
+                   </div>
+                   <!-- Action button -->
+                   <div class="pt-3">
+                      <div class="footer-icons">
+                         <i class="fa fa-map-marker pl-2"></i>
+                         <p class="pr-4">المنطقة الشرقية، الخبر</p>
+
+                      </div>
+                     <div class="footer-icons">
+                         <i class="fa fa-phone pl-2"></i>
+                        <a class="phone-footer" href="tel:8001189999">0000000000</a>
+                      </div>
+                      <div class="footer-icons">
+                         <i class="fa fa-envelope pl-2"></i>
+                        <a class="phone-footer english-font" href="mailto:info@innosoft.sa">info@innosoft.me</a>
+                      </div>
+
+
+                      <div class="icons icons-margin pt-2">
+                         <a class="btn-icon pr-0 mr-0" target="_blank" href="https://twitter.com/innosoftsa">
+                         <i class="icon fa fa-twitter"></i>
+                         </a>
+                         <a class="btn-icon" target="_blank" href="https://instagram.com/innosoftsa">
+                         <i class="icon fa fa-instagram"></i>
+                         </a>
+                         <a class="btn-icon" target="_blank" href="https://www.youtube.com/channel/UCfvsrHbBEeuyqDWll07ZeQg">
+                         <i class="icon fa fa-youtube"></i>
+                         </a>
+
+                         <a class="btn-icon" target="_blank" href="https://facebook.com/innosoftsa">
+                         <i class="icon fa fa-facebook"></i>
+                         </a>
+
+                      </div>
+                   </div>
+                </div>
+
+              
+             </div>
+          </div>
+       </div>
+       <!-- End of section wrapper -->
+    </div>
+
+    <div class="section section-contact text-white" style="background: #3F4251;" data-section="contact-info">
+       <!-- Begin of section wrapper -->
+       <div class="section-wrapper with-margin py-3">
+          <div class="section-content">
+             <div class="row">
+                <div class="col-md-6">
+
+                   <p class="copyright text-center-mob text-right-ipad">  2019 © جميع الحقوق محفوظة</p>
+                </div>
+
+             </div>
+          </div>
+       </div>
+    </div>
+    </div>
+  </main>
+  <!-- END OF page main content -->
+
+  <!-- scripts -->
+  <!-- All Javascript plugins goes here -->
+  <!-- All vendor scripts -->
+  <script src="./js/vendor/jquery-1.12.4.min.js"></script>
+  <script src='./js/moment.min.js'></script>
+  <script src="./js/vendor/scrolloverflow.min.js"></script>
+  <script src="./js/vendor/all.js"></script>
+  <script src="./js/particlejs/particles.min.js"></script>
+  <!-- Countdown script -->
+  <script src="./js/jquery.downCount.js"></script>
+  <!-- Form script -->
+  <script src="./js/form_script.js"></script>
+  <!-- Javascript main files -->
+  <script src="./js/main.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script src="./js/cal-details.js"></script>
+
+
+  <script>
+    $(function() {
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+    });
+  </script>
+
+        <script src="./js/lightgallery-all.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+
+
+
+</body>
+</html>

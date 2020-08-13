@@ -1,0 +1,27 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{% if content %}
+  <header class="section page-header navbar page-header-drawer anim-2 anim-blur dis-desk ar-header">
+    <div class="section-wrapper with-margin">
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-10 col-xl-10 col-lg-10">
+    {{ content }}
+              </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endif %}

@@ -1,0 +1,125 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  {{ node.body.value|raw }}
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <!-- Page Title Here -->
+  <title> {{ node.getTitle() }} </title>
+</head>
+
+<body id="menu" class="body-page">
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="page-loader">
+    <div id="lottie"></div>
+  </div>
+  <!-- BEGIN OF site header Menu -->
+  {% include directory ~ '/partials/header.html.twig' %}
+  <script>
+    // 3. Show/hide menu when icon is clicked
+    var menuItems = $('.all-menu-wrapper .nav-link');
+    var menuIcon = $('.menu-icon, #navMenuIcon');
+    var menuBlock = $('.all-menu-wrapper');
+    var reactToMenu = $('.page-main, .navbar-sidebar, .page-cover, .body-page');
+    var menuLinks = $(".navbar-mainmenu a, .navbar-sidebar a, .navbar-nav-menu a");
+    var menuBg = $(".navbar-mainmenu .mainmenu-bg");
+    // Menu icon clicked
+    menuIcon.on('click', function() {
+      menuIcon.toggleClass('menu-visible');
+      menuBlock.toggleClass('menu-visible');
+      menuItems.toggleClass('menu-visible');
+      reactToMenu.toggleClass('menu-visible');
+      return false;
+    });
+
+    $(".dropdown-about").click(function() {
+      $(".submenu-about").toggleClass("show");
+    });
+
+    $(".dropdown-media").click(function() {
+      $(".submenu-media").toggleClass("show");
+    });
+  </script>
+  <!-- END OF site header Menu-->
+  <!-- BEGIN OF page cover -->
+  <div class="page-cover">
+  </div>
+  <!--END OF page cover -->
+  <!-- BEGIN OF page main content -->
+
+  <main class="page-main main-anim scrollpage-container " id="mainpage">
+    <!-- Begin of description section -->
+
+    <div class="section">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row">
+            <div class="col-12">
+              <div class="article article-light header-title text-dark-blue">
+                <div class="breadcrumb-cont">
+                  <ol class="breadcrumb">
+                    <div class="breadcrumb-cont">
+                      <ol class="breadcrumb">
+                        <li><a href="./homepage">الرئيسية</a><span class="breadcrumb-arrow"> > </span><a href="./media-center">المركز الإعلامي</a><span class="breadcrumb-arrow"> > </span><a href="./news">الأخبار</a></li>
+                      </ol>
+                    </div>
+                  </ol>
+                </div>
+                <h3 class="display-4 text-dark-blue m-0">الخبر الثاني
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-d-img pt-3 pb-3">
+            <img src="./themes/custom/innosoft/img/newsimg2.jpg" class="full-w">
+          </div>
+          <span class="news-d-date">الخميس ، 18 ابريل 2019</span>
+          <div>
+           <p>
+             لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت" (Letraset) البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" (Aldus PageMaker) والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.
+             <br>
+هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء.           <br>
+العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة، وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.            </p>
+
+          </div>
+          <div class="row pt-4">
+
+            <div class="col-xl-12 col-lg-12">
+              <div class="sm-share-box">
+                <span class="btn-share dis-none"></span>
+                <ul>
+                  <li><a class="facebook-share" data-js="facebook-share" href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li><a class="twitter-share" data-js="twitter-share" href="" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li class="hidden-lg"><a href="whatsapp://send?text=/news-details13.html" data-action="share/whats  app/share">
+                  <i class="fa fa-whatsapp"></i></a></li>
+                  <li><a class="print-button"><i class="fa fa-print"></i></a></li>
+                  <li><a href="mailto:?subject=الخبر الثاني&amp;body=/news-details16.html" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+  </main>
+
+  {% include directory ~ '/partials/footer.html.twig' %}
+
+  <script>
+    $(function() {
+      $("#header").load("header");
+      $("#footer").load("footer");
+
+    });
+  </script>
+
+</body>
+
+</html>

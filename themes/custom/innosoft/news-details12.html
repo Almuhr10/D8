@@ -1,0 +1,325 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <!-- Page Title Here -->
+  <title>الاخبار</title>
+  <!-- Meta -->
+  <!-- Page Description Here -->
+  <link rel="stylesheet" href="./fonts/ionicons.min.css">
+  <link rel="stylesheet" href="./fonts/font-awesome.min.css">
+  <!-- Vendor CSS style -->
+  <!-- Uncomment below to load individualy vendor CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./js/vendor/swiper.min.css">
+  <link rel="stylesheet" href="./js/vendor/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="./js/vegas/vegas.min.css">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="icon" href="img/favicon.png" type="image/x-icon">
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- add alt layout here -->
+  <link rel="stylesheet" href="./css/style-1.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-rtl.css">
+  <link rel="stylesheet" type="text/css" href="css/rtl.css">
+  <script src="./js/vendor/modernizr-2.7.1.min.js"></script>
+  <script src="./js/GTM.js"></script>
+</head>
+
+<body id="menu" class="body-page">
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="page-loader">
+    <div id="lottie"></div>
+  </div>
+  <!-- BEGIN OF site header Menu -->
+  <header class="section page-header navbar page-header-drawer anim-2 anim-blur dis-desk ar-header">
+    <div class="section-wrapper with-margin">
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-10 col-xl-10 col-lg-10">
+            <ul class="nav-item" style="padding-right: 0 !important;">
+              <li><a class="nav-link" href="index.html">الرئيسية</a></li>
+
+              <li><a href="media-center.html" class="nav-link">المركز الإعلامي</a>
+
+              </li>
+                          <li><a class="nav-link" href="calendar.html">التقويم</a></li>
+
+              <li><a class="nav-link" href="faq.html">الأسئلة الشائعة</a></li>
+              <li><a class="nav-link english-menu" href="index-en.html">English</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-xl-2 col-lg-2 text-left">
+            <div class="brand">
+
+              <a class="" href="https://innosoft.com.sa/">
+                <!-- Arrows scroll down/up -->
+                <span class="logo">
+                    <img class="light-logo" src="img/logo_dark.png" alt="Logo">
+                    </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <script>
+    $('ul.nav-item li.dropdown').hover(function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(200);
+    }, function() {
+      $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(200);
+    });
+  </script>
+
+
+
+  <header class="page-header navbar page-header-drawer menu-right logo-left topmenu-left dis-mob ar-header-mob">
+      <!-- Begin of logo/brand -->
+    <a class="navbar-brand navbar-brand-inner" href="index.html">
+      <!-- Arrows scroll down/up -->
+      <span class="logo">
+              <img class="light-logo" src="img/logo_dark.png" alt="Logo">
+              </span>
+    </a>
+    <!-- End of logo/brand -->
+    <!-- Begin of menu icon toggler -->
+    <button class="navbar-toggler site-menu-icon" id="navMenuIcon">
+              <!-- Available class : menu-icon-dot / menu-icon-line-->
+              <span class="menu-icon menu-icon-line">
+              <span class="text show-menu-visible">إغلاق</span>
+              <span class="text hide-menu-visible">القائمة</span>
+              <span class="bars">
+              <span class="bar1"></span>
+              <span class="bar2"></span>
+              <span class="bar3"></span>
+              </span>
+              </span>
+           </button>
+    <!-- End of menu icon toggler -->
+
+    <!-- begin of menu wrapper -->
+    <div class="all-menu-wrapper" id="navbarMenu">
+      <!-- Begin of hamburger mainmenu menu -->
+      <nav class="navbar-mainmenu">
+        <div class="mainmenu-bg"></div>
+        <div class="mainmenu-content">
+          <ul class="navbar-nav">
+
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">الرئيسية</a>
+
+
+            <li class="nav-item"><a href="media-center.html" class="nav-link">المركز الإعلامي</a>
+
+            </li>
+                 <li class="nav-item">
+              <a class="nav-link" href="calendar.html">التقويم</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">الأسئلة الشائعة</a>
+            </li>
+
+            <li class="nav-item pt-4-mob"><a class="nav-link english-menu" >English</a></li>
+          </ul>
+
+        </div>
+      </nav>
+      <!-- End of hamburger mainmenu menu -->
+    </div>
+    <!-- end of menu wrapper -->
+  </header>
+  <script>
+    // 3. Show/hide menu when icon is clicked
+    var menuItems = $('.all-menu-wrapper .nav-link');
+    var menuIcon = $('.menu-icon, #navMenuIcon');
+    var menuBlock = $('.all-menu-wrapper');
+    var reactToMenu = $('.page-main, .navbar-sidebar, .page-cover, .body-page');
+    var menuLinks = $(".navbar-mainmenu a, .navbar-sidebar a, .navbar-nav-menu a");
+    var menuBg = $(".navbar-mainmenu .mainmenu-bg");
+    // Menu icon clicked
+    menuIcon.on('click', function() {
+      menuIcon.toggleClass('menu-visible');
+      menuBlock.toggleClass('menu-visible');
+      menuItems.toggleClass('menu-visible');
+      reactToMenu.toggleClass('menu-visible');
+      return false;
+    });
+
+    $(".dropdown-about").click(function() {
+      $(".submenu-about").toggleClass("show");
+    });
+
+    $(".dropdown-media").click(function() {
+      $(".submenu-media").toggleClass("show");
+    });
+  </script>
+  <!-- END OF site header Menu-->
+  <!-- BEGIN OF page cover -->
+  <div class="page-cover">
+  </div>
+  <!--END OF page cover -->
+  <!-- BEGIN OF page main content -->
+
+  <main class="page-main main-anim scrollpage-container " id="mainpage">
+    <!-- Begin of description section -->
+
+    <div class="section">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row">
+            <div class="col-12">
+              <div class="article article-light header-title text-dark-blue">
+                <div class="breadcrumb-cont">
+                  <ol class="breadcrumb">
+                    <div class="breadcrumb-cont">
+                      <ol class="breadcrumb">
+                        <li><a href="index.html">الرئيسية</a><span class="breadcrumb-arrow"> > </span><a href="media-center.html">المركز الإعلامي</a><span class="breadcrumb-arrow"> > </span><a href="news.html">الأخبار</a></li>
+                      </ol>
+                    </div>
+                  </ol>
+                </div>
+                <h3 class="display-4 text-dark-blue m-0">الخبر الخامس
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-d-img pt-3 pb-3">
+            <img src="./img/newsimg5.jpg" class="full-w">
+          </div>
+          <span class="news-d-date">الثلاثاء ، 9 ابريل 2019</span>
+          <div>
+           <p>
+             لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت" (Letraset) البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" (Aldus PageMaker) والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.
+             <br>
+هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء.           <br>
+العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة، وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.            </p>
+
+          </div>
+          <div class="row pt-4">
+
+            <div class="col-xl-12 col-lg-12">
+              <div class="sm-share-box">
+                <span class="btn-share dis-none"></span>
+                <ul>
+                  <li><a class="facebook-share" data-js="facebook-share" href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li><a class="twitter-share" data-js="twitter-share" href="" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li class="hidden-lg"><a href="whatsapp://send?text=/news-details12.html" data-action="share/whats  app/share">
+                  <i class="fa fa-whatsapp"></i></a></li>
+                  <li><a class="print-button"><i class="fa fa-print"></i></a></li>
+                  <li><a href="mailto:?subject=الخير الخامس&amp;body=/news-details12.html" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+  </main>
+
+  <div class="section section-contact moc1 text-white footer-p" data-section="contact-info">
+     <!-- Begin of section wrapper -->
+     <div class="section-wrapper with-margin">
+        <div class="section-content">
+           <div class="row">
+              <!-- begin of title content -->
+              <div class="col-12 col-lg-6 col-md-6">
+                 <div class="title-desc">
+                    <h5 class="under-line">التواصل</h5>
+                 </div>
+                 <!-- Action button -->
+                 <div class="pt-3">
+                    <div class="footer-icons">
+                       <i class="fa fa-map-marker pl-2"></i>
+                       <p class="pr-4">المنطقة الشرقية، الخبر</p>
+
+                    </div>
+                   <div class="footer-icons">
+                       <i class="fa fa-phone pl-2"></i>
+                      <a class="phone-footer" href="tel:8001189999">0000000000</a>
+                    </div>
+                    <div class="footer-icons">
+                       <i class="fa fa-envelope pl-2"></i>
+                      <a class="phone-footer english-font" href="mailto:info@innosoft.sa">info@innosoft.me</a>
+                    </div>
+
+
+                    <div class="icons icons-margin pt-2">
+                       <a class="btn-icon pr-0 mr-0" target="_blank" href="https://twitter.com/innosoftsa">
+                       <i class="icon fa fa-twitter"></i>
+                       </a>
+                       <a class="btn-icon" target="_blank" href="https://instagram.com/innosoftsa">
+                       <i class="icon fa fa-instagram"></i>
+                       </a>
+                       <a class="btn-icon" target="_blank" href="https://www.youtube.com/channel/UCfvsrHbBEeuyqDWll07ZeQg">
+                       <i class="icon fa fa-youtube"></i>
+                       </a>
+
+                       <a class="btn-icon" target="_blank" href="https://facebook.com/innosoftsa">
+                       <i class="icon fa fa-facebook"></i>
+                       </a>
+
+                    </div>
+                 </div>
+              </div>
+
+
+           </div>
+        </div>
+     </div>
+     <!-- End of section wrapper -->
+  </div>
+  <!-- END OF page main content -->
+  <div class="section section-contact text-white" style="background: #3F4251;" data-section="contact-info">
+     <!-- Begin of section wrapper -->
+     <div class="section-wrapper with-margin py-3">
+        <div class="section-content">
+           <div class="row">
+              <div class="col-md-6">
+
+                 <p class="copyright text-center-mob text-right-ipad">  2019 © جميع الحقوق محفوظة</p>
+              </div>
+
+           </div>
+        </div>
+     </div>
+  </div>
+  <!-- scripts -->
+  <!-- All Javascript plugins goes here -->
+  <script src="./js/vendor/jquery-1.12.4.min.js"></script>
+  <!-- All vendor scripts -->
+  <script src="./js/vendor/scrolloverflow.min.js"></script>
+  <script src="./js/vendor/all.js"></script>
+  <script src="./js/particlejs/particles.min.js"></script>
+  <!-- Countdown script -->
+  <script src="./js/jquery.downCount.js"></script>
+  <!-- Form script -->
+  <script src="./js/form_script.js"></script>
+  <!-- Javascript main files -->
+  <script src="./js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+  <script src="./js/infinite-scroll-docs.min.js"></script>
+   <script src="./js/news-details.js"></script>
+
+  <script>
+    $(function() {
+      $("#header").load("header");
+      $("#footer").load("footer");
+
+    });
+  </script>
+
+</body>
+
+</html>

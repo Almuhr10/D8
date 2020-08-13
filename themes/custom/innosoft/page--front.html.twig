@@ -1,0 +1,374 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>الصفحة الرئيسية </title>
+  <!-- Web fonts and Web Icons -->
+  <!-- <link rel="stylesheet" href="themes/custom/innosoft/slick/fonts/font-awesome.min.css"> -->
+  <!-- CSS style -->
+</head>
+<body id="menu" class="body-page">
+  <!-- Google Tag Manager (noscript) -->
+  <!-- End Google Tag Manager (noscript) -->
+  <!--[if lt IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+  <div class="page-loader" id="page-loader">
+    <div id="lottie"></div>
+  </div>
+  <!-- header Menu -->
+  {% include directory ~ '/partials/header.html.twig' %}
+  <script>
+    // 3. Show/hide menu when icon is clicked
+    var menuItems = $('.all-menu-wrapper .nav-link');
+    var menuIcon = $('.menu-icon, #navMenuIcon');
+    var menuBlock = $('.all-menu-wrapper');
+    var reactToMenu = $('.page-main, .navbar-sidebar, .page-cover, .body-page');
+    var menuLinks = $(".navbar-mainmenu a, .navbar-sidebar a, .navbar-nav-menu a");
+    var menuBg = $(".navbar-mainmenu .mainmenu-bg");
+    // Menu icon clicked
+    menuIcon.on('click', function() {
+      menuIcon.toggleClass('menu-visible');
+      menuBlock.toggleClass('menu-visible');
+      menuItems.toggleClass('menu-visible');
+      reactToMenu.toggleClass('menu-visible');
+      return false;
+    });
+
+    $(".dropdown-about").click(function() {
+      $(".submenu-about").toggleClass("show");
+    });
+
+    $(".dropdown-media").click(function() {
+      $(".submenu-media").toggleClass("show");
+    });
+  </script>
+  <!-- END OF site header Menu-->
+  <!-- BEGIN OF page cover -->
+  <div class="page-cover">
+
+    <div class="cover-bg-mask bg-color" data-bgcolor="rgb(254,246,235)"></div>
+  </div>
+  <!--END OF page cover -->
+  <!-- BEGIN OF page main content -->
+  <main class="page-main main-anim scrollpage-container" id="mainpage">
+    <!-- Begin of home section -->
+    <div class="section section-home fullscreen-md main-home section-center content-black pos-relative" data-section="home">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin pt-0">
+        <!-- content -->
+        <div class="section-content anim">
+          <h5 class="anim-blur anim-2">مرحبا بكم</h5>
+          <h1 class="display-4 display-title home-title text-no-shadow anim-blur anim-2 mb-4 explore-underline"><span class="">في اختبار دروبال</span></h1>
+        </div>
+        <div class="section-content anim anim-4 section-sectors">
+         <section class="regular slider anim-blur anim-5">
+            <div>
+              <img src="themes/custom/innosoft/img/sectors-filled/1.png" alt="sectors-filled-sector1">
+              <h6 class="text-center sector-text">العمل</h6>
+            </div>
+            <div>
+              <img src="themes/custom/innosoft/img/sectors-filled/2.png" alt="sectors-filled-sector4">
+              <h6 class="text-center sector-text">الشهادة</h6>
+            </div>
+            <div>
+              <img src="themes/custom/innosoft/img/sectors-filled/3.png" alt="sectors-filled-sector3">
+              <h6 class="text-center sector-text">الإلقاء</h6>
+            </div>
+            <div>
+              <img src="themes/custom/innosoft/img/sectors-filled/4.png" alt="sectors-filled-sector14">
+              <h6 class="text-center sector-text">التسجيل</h6>
+            </div>
+            <div>
+              <img src="themes/custom/innosoft/img/sectors-filled/5.png" alt="sectors-filled-sector2">
+              <h6 class="text-center sector-text">المتاحف</h6>
+            </div>
+            <div>
+              <img src="themes/custom/innosoft/img/sectors-filled/6.png" alg= "sectors-filled-sector10">
+              <h6 class="text-center sector-text">الدورات</h6>
+            </div>
+              <div>
+              <img src="themes/custom/innosoft/img/sectors-filled/7.png" alt="sectors-filled-sector5">
+              <h6 class="text-center sector-text">الاجتماعات</h6>
+            </div>
+
+          </section>
+        </div>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of home section -->
+    <!-- Begin of description section -->
+    <div class="section prince-bader-bw-ar fullscreen-md-off no-footer dis-desk" data-section="about-us" data-bgcolor="rgb(254,246,235)">
+
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+        <!-- content -->
+        <div class="section-content anim">
+         <div class="row justify-content-end">
+              <div class="col-12 col-md-9">
+                <!-- title and description -->
+                <div class="title-desc pl-4">
+                  <h2 class="display-5 anim-2">ما هو "لوريم إيبسوم" ؟</h2>
+                </div>
+              </div>
+              <div class="col-12 col-md-9">
+                <!-- title and description -->
+                <div class="title-desc anim-4">
+              <p>وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت" (Letraset) البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" (Aldus PageMaker) والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.
+                  </p>
+
+
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+
+    <!-- for mobile -->
+    <div class="section fullscreen-md-off no-footer dis-mob" data-bgcolor="rgb(254,246,235)">
+
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row">
+            <div class="col-12">
+              <img src="themes/custom/innosoft/img/prince-bader2.jpg" class="mr-min" alt="prince-bader2" width="250">
+
+            </div>
+            <div class="col-md-12 col-12">
+              <div class="title-desc pt-footer-mob">
+                <h2 class="display-5 anim-2"> ما هو "لوريم إيبسوم" ؟</h2>
+              </div>
+              <!-- Action button -->
+              <!-- title and description -->
+              <div class="title-desc anim-4 text-justify">
+                                <p>وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت" (Letraset) البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" (Aldus PageMaker) والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.
+                </p>
+
+           <footer class="media-footer pt-4"><a class="btn btn-line" href="about#hh-msg" title="HH-msg">
+                                 <span class="text">اقرأ المزيد</span>
+                                 </a>
+                            </footer>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+
+    <!-- End of description section -->
+
+    <!-- section -->
+    <div class="section section-list-feature" data-bgcolor="rgb(254,246,235)">
+        <!-- Begin of section wrapper -->
+        <div class="section-wrapper with-margin">
+          <!-- content -->
+            <div class="title-desc">
+              <h2 class="display-5 display-title anim-2">عن الموقع</h2>
+            </div>
+
+             <div class="list-items row anim-list pt-4">
+              <div class="item col-12 col-lg-4">
+                <div class="media media-service">
+                  <div class="media-body">
+                    <h4 class="underline-orange">ما فائدته ؟</h4>
+                    <p>
+هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="item col-12 col-lg-4">
+                <div class="media media-service">
+                  <div class="media-body">
+                    <h4 class="underline-orange">أين أجده ؟</h4>
+                    <p>
+هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص.</p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="item col-12 col-lg-4">
+                <div class="media media-service">
+                  <div class="media-body">
+                    <h4 class="underline-orange">ما أصله ؟</h4>
+                    <p>
+خلافاَ للإعتقاد السائد فإن لوريم إيبسوم ليس نصاَ عشوائياً، بل إن له جذور في الأدب اللاتيني الكلاسيكي منذ العام 45 قبل
+                      الميلاد، مما يجعله أكثر من 2000 عام في القدم.
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- End of section wrapper -->
+    </div>
+    <!-- Begin of slider section -->
+    <div class="section section-slider fullscreen content-white news">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper fullwidth">
+        <!-- begin of slider -->
+        <div class="slider-swiper-beta">
+          <!-- slider -->
+          <div class="swiper-container slider-container" dir="rtl">
+            <div class="item-list swiper-wrapper">
+
+							 <div class="swiper-slide">
+			    <div class="media-slide-item-beta">
+			      <div class="media-bg bg-color" data-bgcolor="#96C0CE"></div>
+			      <div class="media-content text-anim">
+			        <div class="row justify-content-between">
+			          <div class="col col-12 col-md-6 col-lg-6 order-lg-2">
+			            <div class="media-image">
+			              <img class="img-block-off" src="themes/custom/innosoft/img/newsimg1.jpg">
+			            </div>
+			          </div>
+			          <div class="col center-v col-12 col-md-6 col-lg-6 order-lg-1">
+			            <div class="media-body text-justify">
+			              <h4 class="">الأخبار</h4>
+			              <h4 class="news-title">الخبر الأول</h4>
+<p>محتوى الخبر الأول. محتوى الخبر الأول.</p>
+                    <div class="btns-action"><a class="btn btn-line" href="./news-details13" title="news">
+			      <span class="text">اقرأ المزيد</span>
+			                                 </a>
+			              </div>
+			            </div>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+
+			  <div class="swiper-slide">
+			    <div class="media-slide-item-beta">
+			      <div class="media-bg bg-color" data-bgcolor="#96C0CE"></div>
+			      <div class="media-content text-anim">
+			        <div class="row justify-content-between">
+			          <div class="col col-12 col-md-6 col-lg-6 order-lg-2">
+			            <div class="media-image">
+			              <img class="img-block-off" src="themes/custom/innosoft/img/newsimg2.jpg">
+			            </div>
+			          </div>
+			          <div class="col center-v col-12 col-md-6 col-lg-6 order-lg-1">
+			            <div class="media-body text-justify">
+			              <h4 class="">الأخبار</h4>
+			              <h4 class="news-title">الخبر الثاني</h4>
+			              <p>محتوى الخبر الثاني.محتوى الخبر الثاني.محتوى الخبر الثاني.محتوى الخبر الثاني.محتوى الخبر الثاني.محتوى الخبر الثاني.محتوى الخبر الثاني.محتوى الخبر الثاني.</p>
+			              <div class="btns-action"><a class="btn btn-line" href="news-details16.html" title="news">
+			      <span class="text">اقرأ المزيد</span>
+			                                 </a>
+			              </div>
+			            </div>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+
+			  <div class="swiper-slide">
+			    <div class="media-slide-item-beta">
+			      <div class="media-bg bg-color" data-bgcolor="#96C0CE"></div>
+			      <div class="media-content text-anim">
+			        <div class="row justify-content-between">
+			          <div class="col col-12 col-md-6 col-lg-6 order-lg-2">
+			            <div class="media-image">
+			              <img class="img-block-off" src="themes/custom/innosoft/img/newsimg3.jpg">
+			            </div>
+			          </div>
+			          <div class="col center-v col-12 col-md-6 col-lg-6 order-lg-1">
+			            <div class="media-body text-justify">
+			              <h4 class="">الأخبار</h4>
+			              <h4 class="news-title">الخبر الثالث</h4>
+			              <p>محتوى الخبر الثالث هنا محتوى الخبر الثالث هنا محتوى الخبر الثالث هنا محتوى الخبر الثالث هنا محتوى الخبر الثالث هنا محتوى الخبر الثالث هنا محتوى الخبر الثالث هنا </p>
+			              <div class="btns-action"><a class="btn btn-line" href="news-details17.html" title="news">
+			      <span class="text">اقرأ المزيد</span>
+			                  </a>
+			              </div>
+			            </div>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+
+			  <div class="swiper-slide">
+			    <div class="media-slide-item-beta">
+			      <div class="media-bg bg-color" data-bgcolor="#96C0CE"></div>
+			      <div class="media-content text-anim">
+			        <div class="row justify-content-between">
+			          <div class="col col-12 col-md-6 col-lg-6 order-lg-2">
+			            <div class="media-image">
+			              <img class="img-block-off" src="themes/custom/innosoft/img/newsimg4.jpg">
+			            </div>
+			          </div>
+			          <div class="col center-v col-12 col-md-6 col-lg-6 order-lg-1">
+			            <div class="media-body text-justify">
+			              <h4 class="">الأخبار</h4>
+			              <h4 class="news-title">الخبر الرابع</h4>
+			              <p>محتوى الخبر الرابع .... محتوى الخبر الرابع .... محتوى الخبر الرابع .... محتوى الخبر الرابع .... محتوى الخبر الرابع .... محتوى الخبر الرابع .... محتوى الخبر الرابع .... </p>
+			              <div class="btns-action"><a class="btn btn-line" href="news-details14" title="news">
+			      <span class="text">اقرأ المزيد</span>
+			                                 </a>
+			              </div>
+			            </div>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+            </div>
+          </div>
+          <!-- slider navigation -->
+           <nav class="items-navigation">
+            <div class="items-pagination bar"></div>
+            <div class="items-buttons">
+              <div class="items-button-prev"><a class="btn btn-transp-arrow " title ="news" href="">
+                           <i class="icon">
+                           <span class="arrow-left"></span>
+                           </i>
+                           <span class="text">السابق</span>
+                           </a>
+              </div>
+              <div class="items-button-next"><a class="btn btn-transp-arrow " title ="news" href="">
+                           <span class="text">التالي</span>
+                           <i class="icon">
+                           <span class="arrow-right"></span>
+                           </i>
+                           </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- end of slider slider-swiper-beta -->
+      </div>
+    </div>
+    <!-- End of slider section -->
+    <!-- footer section -->
+    {% include directory ~ '/partials/footer.html.twig' %}
+  </main>
+  <!-- END OF page main content -->
+  <!-- BEGIN OF page footer -->
+  <!-- END OF site footer -->
+  <!-- scripts -->
+  <!-- All Javascript plugins goes here -->
+
+ 
+  <script>
+    $(function() {
+      $("#header").load("header-home");
+      $("#footer").load("footer");
+    });
+  </script>
+  <script>
+  AOS.init();
+</script>
+
+</body>
+</html>

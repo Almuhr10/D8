@@ -1,0 +1,318 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  {{ node.body.value|raw }}
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <!-- Page Title Here -->
+  <title> {{ node.getTitle() }} </title>
+</head>
+
+<body id="menu" class="body-page">
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="page-loader">
+    <div id="lottie"></div>
+  </div>
+  <!-- BEGIN OF site header Menu -->
+      {% include directory ~ '/partials/header.html.twig' %}
+  <script>
+    // 3. Show/hide menu when icon is clicked
+    var menuItems = $('.all-menu-wrapper .nav-link');
+    var menuIcon = $('.menu-icon, #navMenuIcon');
+    var menuBlock = $('.all-menu-wrapper');
+    var reactToMenu = $('.page-main, .navbar-sidebar, .page-cover, .body-page');
+    var menuLinks = $(".navbar-mainmenu a, .navbar-sidebar a, .navbar-nav-menu a");
+    var menuBg = $(".navbar-mainmenu .mainmenu-bg");
+    // Menu icon clicked
+    menuIcon.on('click', function() {
+      menuIcon.toggleClass('menu-visible');
+      menuBlock.toggleClass('menu-visible');
+      menuItems.toggleClass('menu-visible');
+      reactToMenu.toggleClass('menu-visible');
+      return false;
+    });
+
+    $(".dropdown-about").click(function() {
+      $(".submenu-about").toggleClass("show");
+    });
+
+    $(".dropdown-media").click(function() {
+      $(".submenu-media").toggleClass("show");
+    });
+  </script>  <!-- END OF site header Menu-->
+  <!-- BEGIN OF page cover -->
+  <div class="page-cover">
+  </div>
+  <!--END OF page cover -->
+  <!-- BEGIN OF page main content -->
+  <main class="page-main main-anim scrollpage-container " id="mainpage">
+    <!-- Begin of description section -->
+    <div class="section content-white cover-margin" data-section="list-features">
+      <div class="section-cover item-cover">
+        <img class="img-block" src="./themes/custom/innosoft/img/headers/News.jpg" alt="cover">
+      </div>
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row">
+            <div class="col-12">
+              <div class="article article-light header-title">
+                <div class="breadcrumb-cont">
+                  <ol class="breadcrumb">
+                    <div class="breadcrumb-cont">
+                      <ol class="breadcrumb">
+                        <li><a title="home" href="index.html">الرئيسية</a><span class="breadcrumb-arrow"></li>
+                      </ol>
+                    </div>
+                  </ol>
+                </div>
+                <h2 class="display-3">المركز الإعلامي</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <div class="section">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+        <!-- content -->
+        <div class="section-content anim">
+         <div class="row">
+            <div class="col-12">
+                <h1>الأخبار</h1>
+            </div></div>
+          <div id="news1">
+          <form id="myform">
+          <div class="card b-none bg-grey">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-xl-4 col-lg-3 col-md-12 col-12">
+                  <div class="form-group">
+                    <span class="icon-magnifier icon-search"> </span>
+                          <input id="search-text" type="text" placeholder="أكتب كلمات البحث هنا" class="search form-control input-line full-w">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-12 col-12">
+                  <div class="form-group">
+                    <select class="news-filter" name="year1" id="year" style="width: 100%;">
+                      <option value=""  aria-disabled="true" disabled selected>ابحث/اختر السنة</option>
+                      <option value="2019">2019</option>
+                      <option value="2018">2018</option>
+                      <option value="2017">2017</option>
+                      <option value="2016">2016</option>
+                      <option value="2015">2015</option>
+                      <option value="2014">2014</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-12 col-12">
+                  <div class="form-group">
+                    <select class="news-filter" name="month1" id="month" style="width: 100%;">
+                      <option value="" aria-disabled="true" disabled selected>ابحث/اختر الشهر</option>
+                      <option value="يناير">يناير</option>
+                      <option value="فبراير">فبراير</option>
+                      <option value="مارس">مارس</option>
+                      <option value="أبريل">أبريل</option>
+                      <option value="مايو">مايو</option>
+                      <option value="يونيو">يونيو</option>
+                      <option value="يوليو">يوليو</option>
+                      <option value="أغسطس">أغسطس</option>
+                      <option value="سبتمبر">سبتمبر</option>
+                      <option value="أكتوبر">أكتوبر</option>
+                      <option value="نوفمبر">نوفمبر</option>
+                      <option value="ديسمبر">ديسمبر</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-3 col-md-12 col-12 pt-mob-20">
+                  <div class="form-group">
+                    <button onclick="resetFun()" class="btn btn-block btn-outline-white email_b">مسح</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </form>
+            <div class="not-found col-md-12" style="display:none">لا يوجد بيانات</div>
+          <div class="row news-boxes list">
+
+            	 <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box">
+              <div class="card news-box">
+                <div class="card-body pb-news-15">
+                  <article class="media-item news">
+                    <a title="news1" href="./news-details13" class="media-image">
+                      <div class="news-img"> <img src="./themes/custom/innosoft/img/newsimg1.jpg" class="img-fluid"></div>
+                    </a>
+                    <h3 class="media-content px-15 title"><a title="news2" href="./news-details13">الخبر الاول</a></h3>
+                    <div class="media-meta px-15"><span class="meta-item date">الخميس، 18 <span class="month1">أبريل</span><span class="year1">2019</span></span></div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+             <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box">
+              <div class="card news-box">
+                <div class="card-body pb-news-15">
+                  <article class="media-item news">
+                    <a title="news1" href="./news-details16" class="media-image">
+                      <div class="news-img"> <img src="./themes/custom/innosoft/img/newsimg2.jpg" class="img-fluid" ></div>
+                    </a>
+                    <h3 class="media-content px-15 title"><a title="news2" href="./news-details16">الخبر الثاني</a></h3>
+                    <div class="media-meta px-15"><span class="meta-item date">الخميس، 18 <span class="month1">أبريل</span><span class="year1">2019</span></span></div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+             <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box">
+              <div class="card news-box">
+                <div class="card-body pb-news-15">
+                  <article class="media-item news">
+                    <a title="news1" href="news-details14.html" class="media-image">
+                      <div class="news-img"> <img src="./themes/custom/innosoft/img/newsimg3.jpg" class="img-fluid"></div>
+                    </a>
+                    <h3 class="media-content px-15 title"><a title="news2" href="news-details14.html">الخبر الثالث</a></h3>
+                    <div class="media-meta px-15"><span class="meta-item date">الاثنين، 15 <span class="month1">أبريل</span><span class="year1">2019</span></span></div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+             <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box">
+              <div class="card news-box">
+                <div class="card-body pb-news-15">
+                  <article class="media-item news">
+                    <a title="news1" href="news-details15.html" class="media-image">
+                      <div class="news-img"> <img src="./themes/custom/innosoft/img/newsimg4.jpg" class="img-fluid"></div>
+                    </a>
+                    <h3 class="media-content px-15 title"><a title="news2" href="news-details15.html">الخبر الرابع</a></h3>
+                    <div class="media-meta px-15"><span class="meta-item date">الاحد، 14 <span class="month1">أبريل</span><span class="year1">2019</span></span></div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+						<div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box">
+              <div class="card news-box">
+                <div class="card-body pb-news-15">
+                  <article class="media-item news">
+                    <a title="news1" href="news-details12.html" class="media-image">
+                      <div class="news-img">  <img src="./themes/custom/innosoft/img/newsimg5.jpg" class="img-fluid"></div>
+                    </a>
+                    <h3 class="media-content px-15 title"><a title="news" href="news-details12.html">الخبر الخامس</a></h3>
+                    <div class="media-meta px-15"><span class="meta-item date">الثلاثاء، 9 <span class="month1">أبريل</span><span class="year1">2019</span></span></div>
+                  </article>
+                </div>
+              </div>
+            </div>
+						<div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box">
+              <div class="card news-box">
+                <div class="card-body pb-news-15">
+                  <article class="media-item news">
+                    <a title="news1" href="news-details5.html" class="media-image">
+                      <div class="news-img">  <img src="./themes/custom/innosoft/img/newsimg6.png" class="img-fluid"></div>
+                    </a>
+                    <h3 class="media-content px-15 title"><a title="news" href="news-details5.html">الخبر السادس</a></h3>
+                    <div class="media-meta px-15"><span class="meta-item date">الخميس، 4 <span class="month1">أبريل</span><span class="year1">2019</span></span></div>
+                  </article>
+                </div>
+              </div>
+            </div>
+			<div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box">
+			  <div class="card news-box">
+			    <div class="card-body pb-news-15">
+			      <article class="media-item news">
+			        <a title="news1" href="news-details6.html" class="media-image">
+			          <div class="news-img"> <img src="./themes/custom/innosoft/img/newsimg7.jpg" class="img-fluid" ></div>
+			        </a>
+			        <h3 class="media-content px-15 title"><a title="news6" href="news-details6.html">الخبر السابع</a></h3>
+			        <div class="media-meta px-15"><span class="meta-item date">الثلاثاء، 2 <span class="month1">أبريل</span><span class="year1">2019</span></span></div>
+			      </article>
+			    </div>
+			  </div>
+			</div>
+			  <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box">
+			  <div class="card news-box">
+			    <div class="card-body pb-news-15">
+			      <article class="media-item news">
+			        <a title="news1" href="news-details7.html" class="media-image">
+			          <div class="news-img"> <img src="./themes/custom/innosoft/img/newsimg8.jpg" class="img-fluid"></div>
+			        </a>
+			        <h3 class="media-content px-15 title"><a title="news2" href="news-details7.html">الخبر الثامن</a></h3>
+			        <div class="media-meta px-15"><span class="meta-item date">الثلاثاء، 2 <span class="month1">أبريل</span><span class="year1">2019</span></span></div>
+			      </article>
+			    </div>
+			  </div>
+			</div>
+
+						 <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box">
+              <div class="card news-box">
+                <div class="card-body pb-news-15">
+                  <article class="media-item news">
+                    <a title="news1" href="news-details2.html" class="media-image">
+                      <div class="news-img"> <img src="./themes/custom/innosoft/img/newsimg9.jpg" class="img-fluid"></div>
+                    </a>
+                    <h3 class="media-content px-15 title"><a title="news2" href="news-details2.html">الخبر التاسع</a></h3>
+			       		 <div class="media-meta px-15"><span class="meta-item date">الاثنين، 1 <span class="month1">أبريل</span><span class="year1">2019</span></span></div>
+                  </article>
+                </div>
+              </div>
+            </div>
+						 <div class="col-md-6 col-lg-4 col-xl-4 d-flex n-box">
+              <div class="card news-box">
+                <div class="card-body pb-news-15">
+                  <article class="media-item news">
+                    <a title="news1" href="news-details4.html" class="media-image">
+                      <div class="news-img"> <img src="./themes/custom/innosoft/img/newsimg10.jpg" class="img-fluid"></div>
+                    </a>
+                    <h3 class="media-content px-15 title"><a title="news2" href="news-details4.html">الخبر العاشر</a></h3>
+                    <div class="media-meta px-15"><span class="meta-item date">الأحد، 31 <span class="month1">مارس</span><span class="year1">2019</span></span></div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="row pt-5">
+          <div class="col-md-12 text-center">
+            <nav>
+              <ul class="pagination justify-content-center">
+                <li class="page-item prev-pagination">
+                  <a title="news12" class="page-link pagination-prev disabled"  href="#">السابق</a>
+                </li>
+
+                  <li>
+                <ul class="pagination-layout"></ul>
+                </li>
+                <li class="page-item next-pagination">
+                  <a title="news13" class="page-link pagination-next " href="#">التالي</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+       </div>
+        </div>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <!-- End of description section -->
+    <div id="footer"></div>
+
+  </main>
+  {% include directory ~ '/partials/footer.html.twig' %}
+
+  <script>
+    $(function() {
+      $("#header").load("header");
+      $("#footer").load("footer");
+    });
+  </script>
+</body>
+</html>

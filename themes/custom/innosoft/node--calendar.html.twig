@@ -1,0 +1,202 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  {{ node.body.value|raw }}
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+  <!-- Page Title Here -->
+  <title> {{ node.getTitle() }} </title>
+</head>
+<body id="menu" class="body-page">
+
+  <!-- BEGIN OF site header Menu -->
+  {% include directory ~ '/partials/header.html.twig' %}
+  <script>
+    // 3. Show/hide menu when icon is clicked
+    var menuItems = $('.all-menu-wrapper .nav-link');
+    var menuIcon = $('.menu-icon, #navMenuIcon');
+    var menuBlock = $('.all-menu-wrapper');
+    var reactToMenu = $('.page-main, .navbar-sidebar, .page-cover, .body-page');
+    var menuLinks = $(".navbar-mainmenu a, .navbar-sidebar a, .navbar-nav-menu a");
+    var menuBg = $(".navbar-mainmenu .mainmenu-bg");
+    // Menu icon clicked
+    menuIcon.on('click', function() {
+      menuIcon.toggleClass('menu-visible');
+      menuBlock.toggleClass('menu-visible');
+      menuItems.toggleClass('menu-visible');
+      reactToMenu.toggleClass('menu-visible');
+      return false;
+    });
+
+    $(".dropdown-about").click(function() {
+      $(".submenu-about").toggleClass("show");
+    });
+
+    $(".dropdown-media").click(function() {
+      $(".submenu-media").toggleClass("show");
+    });
+  </script>
+  <!-- END OF site header Menu-->
+  <!-- END OF site header Menu-->
+  <!-- BEGIN OF page cover -->
+  <div class="page-cover">
+  </div>
+  <!--END OF page cover -->
+  <!-- BEGIN OF page main content -->
+  <main class="page-main main-anim scrollpage-container " id="mainpage">
+    <!-- Begin of description section -->
+    <div class="section content-white cover-margin" data-section="list-features">
+      <div class="section-cover item-cover">
+        <img class="img-block" src="themes/custom/innosoft/img/headers/Calendar.png" alt="cover">
+      </div>
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+
+        <!-- content -->
+        <div class="section-content anim">
+          <div class="row">
+            <div class="col-12">
+              <div class="article article-light header-title">
+                <div class="breadcrumb-cont">
+                  <ol class="breadcrumb">
+                    <div class="breadcrumb-cont">
+                      <ol class="breadcrumb">
+                        <li><a title="home" href="./homepage">الرئيسية</a></li>
+                      </ol>
+                    </div>
+                  </ol>
+                </div>
+                <h1 class="display-3">التقويم </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of section wrapper -->
+    </div>
+    <div class="section bg-white calendar" data-section="images">
+      <!-- Begin of section wrapper -->
+      <div class="section-wrapper with-margin">
+        <!-- content -->
+        <div class="section-content anim">
+
+           <div class="card b-none bg-grey">
+            <div class="card-body">
+                <div id="date-picker-gregorian">
+                  <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-12 col-12">
+                     <div class="form-group">
+            <select id="date-picker-month-gregorian" style="width: 100%;">
+                <option value=""></option>
+                <option value="01">يناير</option>
+                <option value="02">فبراير</option>
+                <option value="03">مارس</option>
+                <option value="04">أبريل</option>
+                <option value="05">مايو</option>
+                <option value="06">يونيو</option>
+                <option value="07">يوليو</option>
+                <option value="08">أغسطس</option>
+                <option value="09">سبتمبر</option>
+                <option value="10">أكتوبر</option>
+                <option value="11">نوفمبر</option>
+                <option value="12">ديسمبر</option>
+            </select>
+                  </div>
+                    </div>
+                <div class="col-xl-3 col-lg-3 col-md-12 col-12">
+                         <select id="date-picker-year-gregorian" start-year="2019" style="width: 100%;">
+                <option value="2019"> 2019 </option>
+            </select>
+                    </div>
+                  </div>
+        </div>
+            </div>
+          </div>
+    <div id="calender-block" class="pt-3">
+        <div id='calendar'></div>
+    </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- End of section wrapper -->
+    </div>
+    <!-- End of description section -->
+<!-- Modal -->
+<div id="calendarModal" class="modal fade" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" class="modal-body">
+        <p id="description" class="pt-2">
+				</p>
+        <div class="row ">
+					<div class="col-md-12">
+							<hr>
+					</div>
+          <div class="col-md-6 col-6">
+
+<i class="fa fa-map-marker"></i> <p style="display:inline;" id="location"></p>
+          </div>
+          <div class="col-md-6 col-6 text-left">
+
+          <i class="fa fa-clock-o"></i> <p style="display:inline;" id="time"></p>
+          </div>
+					<div class="col-md-12 text-center">
+							<hr>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3576.7527726427957!2d50.1745322!3d26.3021135!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49ef337eccc407%3A0xff080967267c84d7!2sInnosoft!5e0!3m2!1sen!2ssa!4v1578481471801!5m2!1sen!2ssa" width="100%" height="180" frameborder="0" style="border:0" allowfullscreen></iframe>
+						<br>
+						<a id="eventUrl" class="btn btn-outline-white">اقرأ المزيد</a>
+					</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% include directory ~ '/partials/footer.html.twig' %}
+<!-- End of footer section -->
+
+
+  </main>
+  <!-- END OF page main content -->
+
+  <!-- scripts -->
+  <!-- All Javascript plugins goes here -->
+  <!-- All vendor scripts -->
+  <script src="themes/custom/innosoft/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src='themes/custom/innosoft/js/moment.min.js'></script>
+  <script src="themes/custom/innosoft/js/vendor/scrolloverflow.min.js"></script>
+  <script src="themes/custom/innosoft/js/vendor/all.js"></script>
+  <script src="themes/custom/innosoft/js/particlejs/particles.min.js"></script>
+  <!-- Countdown script -->
+  <script src="themes/custom/innosoft/js/jquery.downCount.js"></script>
+  <!-- Form script -->
+  <script src="themes/custom/innosoft/js/form_script.js"></script>
+  <!-- Javascript main files -->
+  <script src="themes/custom/innosoft/js/main.js"></script>
+  <script src="themes/custom/innosoft/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+  <script src='themes/custom/innosoft/js/fullcalendar.min.js'></script>
+    <script src="themes/custom/innosoft/js/hijrah-date.min.js"></script>
+    <script src="themes/custom/innosoft/js/greg_hijrah_calender.js"></script>
+    <script src="themes/custom/innosoft/js/custom2.js"></script>
+  <script src='themes/custom/innosoft/js/ar.js'></script>
+  <script>
+    $(function() {
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+    });
+  </script>
+<script src="js/date.js"></script>
+
+</body>
+</html>
